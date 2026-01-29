@@ -1,0 +1,176 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/**
+ * Qubit Technologies - Production Ready Theme
+ * Features: True Light/Dark Mode, Premium Neon Accents, High Readability.
+ */
+
+:root {
+  /* Liquid Glass Palette (Midnight & Indigo) */
+  --background: #020617;
+  --foreground: #f8fafc;
+  --primary: #6366f1;
+  --secondary: #a855f7;
+  --accent: #22d3ee;
+  --card-bg: rgba(15, 23, 42, 0.3);
+  --card-border: rgba(255, 255, 255, 0.05);
+  --muted: #94a3b8;
+  --glass-bg: rgba(2, 6, 23, 0.7);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --glow: rgba(99, 102, 241, 0.15);
+}
+
+/* Light Mode Overrides */
+.light {
+  --background: #f8fafc;
+  --foreground: #0f172a;
+  --primary: #0284c7;
+  /* Sky 700 */
+  --secondary: #4f46e5;
+  /* Indigo 600 */
+  --accent-glow: rgba(2, 132, 199, 0.1);
+  --card-bg: #ffffff;
+  --card-border: #e2e8f0;
+  --muted: #64748b;
+  --glass-bg: rgba(248, 250, 252, 0.8);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html.lenis {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  /* Hardware Acceleration for Smoother Scrolling */
+  transform: translate3d(0, 0, 0);
+}
+
+h1,
+h2,
+h3,
+h4,
+.font-orbitron {
+  font-family: 'Orbitron', sans-serif;
+  letter-spacing: -0.02em;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--card-border);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary);
+}
+
+/* Global Helper Classes */
+.text-gradient {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.neon-card {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 1rem;
+  transition: all 0.2s ease;
+  will-change: transform;
+}
+
+.neon-card:hover {
+  border-color: var(--primary);
+  transform: translateY(-2px);
+}
+
+.glass-premium {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(24px) saturate(180%);
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+  border: 1px solid var(--glass-border);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+  will-change: transform, backdrop-filter;
+}
+
+.glass-header {
+  background: var(--glass-bg);
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  border-bottom: 1px solid var(--glass-border);
+}
+
+.mesh-gradient {
+  background-color: var(--background);
+  background-image:
+    radial-gradient(at 0% 0%, rgba(99, 102, 241, 0.15) 0px, transparent 50%),
+    radial-gradient(at 100% 0%, rgba(168, 85, 247, 0.15) 0px, transparent 50%),
+    radial-gradient(at 100% 100%, rgba(34, 211, 238, 0.1) 0px, transparent 50%),
+    radial-gradient(at 0% 100%, rgba(99, 102, 241, 0.1) 0px, transparent 50%);
+  will-change: background-image;
+}
+
+/* Typography Colors */
+.text-foreground {
+  color: var(--foreground);
+}
+
+.text-secondary-variable {
+  color: var(--muted);
+}
+
+.bg-background {
+  background-color: var(--background);
+}
+
+::selection {
+  background: var(--primary);
+  color: #fff;
+}
+
+/* Binary Mask */
+.binary-mask {
+  mask-image: linear-gradient(to bottom, black, transparent);
+  -webkit-mask-image: linear-gradient(to bottom, black, transparent);
+}
+
+.text-muted {
+  color: var(--muted);
+}
