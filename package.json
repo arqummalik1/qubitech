@@ -11,7 +11,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
   },
-  "homepage": "https://arqummalik1.github.io/qubit-tech",
+  "homepage": "https://arqummalik1.github.io/qubitech",
   "dependencies": {
     "@studio-freight/lenis": "^1.0.42",
     "autoprefixer": "^10.4.23",

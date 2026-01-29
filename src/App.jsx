@@ -56,7 +56,7 @@ function App() {
   }, [])
 
   return (
-    <Router>
+    <Router future={{ v7_startTransition: true, v7_relativeSplatPath: true }} basename={import.meta.env.BASE_URL}>
       <div className="bg-background min-h-screen text-foreground selection:bg-primary selection:text-white">
         {loading && <LoadingScreen />}
         <ScrollToTop />
@@ -65,6 +65,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/portfolio" element={<PortfolioPage />} />
+          <Route path="*" element={<div className="min-h-[50vh] flex items-center justify-center pt-32 text-2xl font-orbitron">404 - Route Not Found</div>} />
         </Routes>
 
         <Footer />

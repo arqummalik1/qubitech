@@ -54,7 +54,7 @@ const Navbar = () => {
                     </div>
                     <span className={`font-orbitron font-black tracking-tighter text-foreground transition-all duration-500 ${scrolled ? 'text-lg' : 'text-2xl'
                         }`}>
-                        QUBIT<span className="text-primary">.TECH</span>
+                        QUBI<span className="text-primary">TECH</span>
                     </span>
                 </Link>
 
@@ -96,6 +96,13 @@ const Navbar = () => {
 
                 {/* Mobile Toggle */}
                 <div className="lg:hidden flex items-center gap-3">
+                    <button
+                        onClick={toggleTheme}
+                        className={`rounded-xl glass-premium flex items-center justify-center text-foreground/80 hover:text-primary transition-all ${scrolled ? 'w-10 h-10' : 'w-12 h-12'
+                            }`}
+                    >
+                        {isDark ? <Sun size={scrolled ? 18 : 20} /> : <Moon size={scrolled ? 18 : 20} />}
+                    </button>
                     <button onClick={() => setIsOpen(!isOpen)} className={`rounded-xl glass-premium flex items-center justify-center text-foreground transition-all ${scrolled ? 'w-10 h-10' : 'w-12 h-12'
                         }`}>
                         {isOpen ? <X size={scrolled ? 20 : 24} /> : <Menu size={scrolled ? 20 : 24} />}

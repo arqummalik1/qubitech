@@ -210,7 +210,7 @@ const Contact = () => {
                             {/* Info & Socials Group - Tightly Packed */}
                             <div className="flex-1 grid grid-cols-2 gap-4">
                                 {[
-                                    { icon: <Mail size={20} />, label: 'Email', val: 'hello@qubit.tech' },
+                                    { icon: <Mail size={20} />, label: 'Email', val: 'hello@qubitech.com' },
                                     { icon: <MapPin size={20} />, label: 'Base', val: 'Jammu, IN' }
                                 ].map((item, i) => (
                                     <div key={i} className="glass-premium p-6 rounded-[2rem] flex flex-col justify-center gap-3 hover:bg-white/5 transition-colors group">

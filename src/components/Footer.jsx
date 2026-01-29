@@ -32,8 +32,8 @@ const Footer = () => {
                             <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-primary to-secondary rounded-2xl flex items-center justify-center font-orbitron font-black text-white shadow-lg">
                                 Q
                             </div>
-                            <span className="font-orbitron font-black text-2xl sm:text-3xl tracking-tighter text-foreground uppercase">
-                                QUBIT<span className="text-primary">.TECH</span>
+                            <span className="font-orbitron font-black text-2xl tracking-tighter text-foreground">
+                                QUBI<span className="text-primary">TECH</span>
                             </span>
                         </Link>
                         <p className="text-base sm:text-lg md:text-xl font-medium text-muted max-w-md mx-auto sm:mx-0 leading-relaxed">
@@ -87,20 +87,13 @@ const Footer = () => {
                     </div>
                 </div>
 
-                {/* Bottom Bar */}
-                <div className="pt-12 border-t border-glass-border flex flex-col md:flex-row justify-between items-center gap-8 text-center md:text-left">
-                    <div className="text-[8px] sm:text-[10px] font-orbitron font-black text-foreground/20 uppercase tracking-[0.3em] sm:tracking-[0.5em]">
-                        © {currentYear} Qubit Technologies — Digital Excellence
-                    </div>
-
-                    <button
-                        onClick={scrollToTop}
-                        className="flex items-center gap-4 text-[9px] sm:text-[10px] font-orbitron font-black uppercase tracking-[0.4em] text-primary hover:gap-6 transition-all group"
-                    >
-                        <span>Return To Origin</span>
-                        <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-full glass-premium flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-all shadow-2xl">
-                            <ArrowUp size={18} sm:size={20} />
-                        </div>
+                {/* Copyright */}
+                <div className="border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                    <p className="font-orbitron font-bold text-[10px] text-muted uppercase tracking-[0.3em]">
+                        © 2026 Qubitech — Digital Excellence
+                    </p>
+                    <button onClick={scrollToTop} className="font-orbitron font-bold text-[9px] text-primary uppercase tracking-[0.2em] hover:text-white transition-colors">
+                        Return to Origin
                     </button>
                 </div>
 

@@ -17,7 +17,7 @@ const LoadingScreen = () => {
                 }
                 return prev + 1
             })
-        }, 15)
+        }, 30) // Optimized for low-end devices
 
         return () => clearInterval(timer)
     }, [])
